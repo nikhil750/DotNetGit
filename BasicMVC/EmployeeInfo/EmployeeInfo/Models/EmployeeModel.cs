@@ -21,6 +21,14 @@ namespace EmployeeInfo.Models
         public DateTime DateofJoining { get; set; }
     }
 
+    [Table("EmployeeBranch")]
+    public class EmployeeBranch
+    {
+        [Key, DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
+        public  virtual int EmployeeID { get; set; }
+        public  virtual string Branch { get; set; }
+    }
+
     public class EmployeeContext : DbContext
     {
         public EmployeeContext() : base("EmployeeContext") { }

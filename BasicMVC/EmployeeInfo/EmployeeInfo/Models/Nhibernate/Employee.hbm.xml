@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="EmployeeInfo" namespace="EmployeeInfo.Models">
+	<class name="EmployeeBranch" table="EmployeeBranch" dynamic-update="true">
+		<cache usage="read-write"/>
+		<id name="EmployeeID" column="EmployeeID">
+			<generator class="native"/>
+		</id>
+		<property name="Branch"/>
+	</class>
+</hibernate-mapping>

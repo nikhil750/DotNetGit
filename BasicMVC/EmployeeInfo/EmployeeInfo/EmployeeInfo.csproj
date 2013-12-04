@@ -39,7 +39,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -208,9 +214,14 @@
     <Compile Include="Migrations\201312041015224_NewTable3.Designer.cs">
       <DependentUpon>201312041015224_NewTable3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312041124400_NewTable4.cs" />
+    <Compile Include="Migrations\201312041124400_NewTable4.Designer.cs">
+      <DependentUpon>201312041124400_NewTable4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\Nhibernate\NHibernate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +282,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Models\Nhibernate\Employee.hbm.xml" />
+    <Content Include="Models\Nhibernate\hibernate.cfg.xml" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -326,6 +339,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\Employee\EmployeeBranch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -348,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312041015224_NewTable3.resx">
       <DependentUpon>201312041015224_NewTable3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312041124400_NewTable4.resx">
+      <DependentUpon>201312041124400_NewTable4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
