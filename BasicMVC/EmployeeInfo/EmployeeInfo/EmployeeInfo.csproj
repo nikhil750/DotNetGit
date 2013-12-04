@@ -182,12 +182,35 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312040946274_InitialCreate.cs" />
+    <Compile Include="Migrations\201312040946274_InitialCreate.Designer.cs">
+      <DependentUpon>201312040946274_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312040957531_CreatingTable.cs" />
+    <Compile Include="Migrations\201312040957531_CreatingTable.Designer.cs">
+      <DependentUpon>201312040957531_CreatingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312041001502_NewTable.cs" />
+    <Compile Include="Migrations\201312041001502_NewTable.Designer.cs">
+      <DependentUpon>201312041001502_NewTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312041006291_NewTable2.cs" />
+    <Compile Include="Migrations\201312041006291_NewTable2.Designer.cs">
+      <DependentUpon>201312041006291_NewTable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312041015224_NewTable3.cs" />
+    <Compile Include="Migrations\201312041015224_NewTable3.Designer.cs">
+      <DependentUpon>201312041015224_NewTable3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -301,12 +324,31 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201312040946274_InitialCreate.resx">
+      <DependentUpon>201312040946274_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312040957531_CreatingTable.resx">
+      <DependentUpon>201312040957531_CreatingTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312041001502_NewTable.resx">
+      <DependentUpon>201312041001502_NewTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312041006291_NewTable2.resx">
+      <DependentUpon>201312041006291_NewTable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312041015224_NewTable3.resx">
+      <DependentUpon>201312041015224_NewTable3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
