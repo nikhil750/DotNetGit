@@ -338,6 +338,8 @@
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Branch.cshtml" />
+    <Content Include="Views\Employee\CreateBranch.cshtml" />
+    <Content Include="Views\Employee\EditBranch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

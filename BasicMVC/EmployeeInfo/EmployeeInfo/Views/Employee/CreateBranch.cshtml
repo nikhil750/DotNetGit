@@ -1,0 +1,36 @@
+﻿@model EmployeeInfo.Models.EmployeeBranch
+
+@{
+    ViewBag.Title = "CreateBranch";
+}
+
+<h2>CreateBranch</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>EmployeeBranch</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Branch)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Branch)
+            @Html.ValidationMessageFor(model => model.Branch)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

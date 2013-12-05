@@ -31,7 +31,10 @@ namespace EmployeeInfo.Models
 
     public class EmployeeContext : DbContext
     {
-        public EmployeeContext() : base("EmployeeContext") { }
+        public EmployeeContext() : 
+            base("EmployeeContext") {
+        }
+
         public DbSet<EmployeeGit> employeeModel { get; set; }
     }
 }

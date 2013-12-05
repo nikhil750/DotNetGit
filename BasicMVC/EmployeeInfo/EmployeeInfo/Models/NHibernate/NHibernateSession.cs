@@ -18,7 +18,7 @@ namespace EmployeeInfo.Models.NHibernate
             var employeeConfig = HttpContext.Current.Server.MapPath(@"~\Models\NHibernate\EmployeeBranch.hbm.xml");
             nHConfig.AddFile(employeeConfig);
             ISessionFactory sessionFactory = nHConfig.BuildSessionFactory();
-
+            
             return sessionFactory.OpenSession();
         }
     }

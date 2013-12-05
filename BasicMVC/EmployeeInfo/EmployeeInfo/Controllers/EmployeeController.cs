@@ -42,5 +42,53 @@ namespace EmployeeInfo.Controllers
             }
         }
 
+        public ActionResult CreateBranch()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateBranch(EmployeeBranch emp)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                using (ITransaction sessionTransact = session.BeginTransaction())
+                {
+                    sessionTransact.Begin();
+                    session.Save(emp);
+                    sessionTransact.Commit();
+                }
+            }
+            return RedirectToAction("Branch");
+        }
+
+        public ActionResult EditBranch(int id)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                var employeeBranchEdit = session.Get<EmployeeBranch>(id);
+                return View(employeeBranchEdit);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult EditBranch(int id, EmployeeBranch empBranch)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                var employeeBranchSelected = session.Get<EmployeeBranch>(id);
+                employeeBranchSelected.Branch = empBranch.Branch;
+
+                using (ITransaction ItransactionSesison = session.BeginTransaction())
+                {
+                    ItransactionSesison.Begin();
+                    session.Save(employeeBranchSelected);
+                    ItransactionSesison.Commit();
+                }
+            }
+            return RedirectToAction("Branch");
+        }
+
+
     }
 }

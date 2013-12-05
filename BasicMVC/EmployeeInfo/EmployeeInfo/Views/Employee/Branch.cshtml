@@ -7,7 +7,7 @@
 <h2>Branch</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "CreateBranch")
 </p>
 <table>
     <tr>
@@ -23,7 +23,7 @@
             @Html.DisplayFor(modelItem => item.Branch)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }) |
+            @Html.ActionLink("Edit", "EditBranch", new { id=item.EmployeeID }) |
             @Html.ActionLink("Details", "Details", new { id=item.EmployeeID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeID })
         </td>
