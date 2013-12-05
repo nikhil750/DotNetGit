@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EmployeeInfo.Models;
+using EmployeeInfo.Models.NHibernate;
+using NHibernate;
+using NHibernate.Linq;
 namespace EmployeeInfo.Controllers
 {
     public class EmployeeController : Controller
@@ -29,5 +32,15 @@ namespace EmployeeInfo.Controllers
             eContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Branch()
+        {
+            using (ISession session =  NHibernateSession.OpenSession())
+            {
+                var employeeBranch = session.Query<EmployeeBranch>().ToList();
+                return View(employeeBranch);
+            }
+        }
+
     }
 }
