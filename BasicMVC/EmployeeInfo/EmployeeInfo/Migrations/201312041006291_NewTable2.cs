@@ -18,8 +18,6 @@ namespace EmployeeInfo.Migrations
                         DateofJoining = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.EmployeeID);
-            
-            
         }
         
         public override void Down()

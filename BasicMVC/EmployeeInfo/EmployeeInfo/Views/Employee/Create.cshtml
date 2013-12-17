@@ -1,4 +1,4 @@
-﻿@model EmployeeInfo.Models.EmployeeGit
+﻿@model EmployeeInfo.Models.CreateEmployee
 
 @{
     ViewBag.Title = "Create";
@@ -14,29 +14,31 @@
         <legend>EmployeeInfo</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.EmployeeName)
+            @Html.LabelFor(model => model.EmployeeInformation.EmployeeName)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.EmployeeName)
-            @Html.ValidationMessageFor(model => model.EmployeeName)
+            @Html.EditorFor(model => model.EmployeeInformation.EmployeeName)
+            @Html.ValidationMessageFor(model => model.EmployeeInformation.EmployeeName)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Designation)
+            @Html.LabelFor(model => model.EmployeeInformation.Designation)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Designation)
-            @Html.ValidationMessageFor(model => model.Designation)
+            @Html.EditorFor(model => model.EmployeeInformation.Designation)
+            @Html.ValidationMessageFor(model => model.EmployeeInformation.Designation)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DateofJoining)
+            @Html.LabelFor(model => model.EmployeeInformation.DateofJoining)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DateofJoining)
-            @Html.ValidationMessageFor(model => model.DateofJoining)
+            @Html.EditorFor(model => model.EmployeeInformation.DateofJoining)
+            @Html.ValidationMessageFor(model => model.EmployeeInformation.DateofJoining)
         </div>
-
+        <div>
+            @Html.ListBoxFor(model=> model.EmployeeBranch, new MultiSelectList(Model.EmployeeBranch,"EmployeeID", "Branch"))
+        </div>
         <p>
             <input type="submit" value="Create" />
         </p>

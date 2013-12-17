@@ -216,8 +216,37 @@
     <Compile Include="Migrations\201312041015224_NewTable3.Designer.cs">
       <DependentUpon>201312041015224_NewTable3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312121058332_new.cs" />
+    <Compile Include="Migrations\201312121058332_new.Designer.cs">
+      <DependentUpon>201312121058332_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312121114461_AddedBranchNew.cs" />
+    <Compile Include="Migrations\201312121114461_AddedBranchNew.Designer.cs">
+      <DependentUpon>201312121114461_AddedBranchNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312170556059_newFkey.cs" />
+    <Compile Include="Migrations\201312170556059_newFkey.Designer.cs">
+      <DependentUpon>201312170556059_newFkey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312170606445_newFkey1.cs" />
+    <Compile Include="Migrations\201312170606445_newFkey1.Designer.cs">
+      <DependentUpon>201312170606445_newFkey1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312170607592_newFkey2.cs" />
+    <Compile Include="Migrations\201312170607592_newFkey2.Designer.cs">
+      <DependentUpon>201312170607592_newFkey2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312170709157_newFkey4.cs" />
+    <Compile Include="Migrations\201312170709157_newFkey4.Designer.cs">
+      <DependentUpon>201312170709157_newFkey4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312170955571_addingJunctionTable.cs" />
+    <Compile Include="Migrations\201312170955571_addingJunctionTable.Designer.cs">
+      <DependentUpon>201312170955571_addingJunctionTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CreateEmployee.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\NHibernate\NHibernateSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -362,6 +391,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312041015224_NewTable3.resx">
       <DependentUpon>201312041015224_NewTable3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312121058332_new.resx">
+      <DependentUpon>201312121058332_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312121114461_AddedBranchNew.resx">
+      <DependentUpon>201312121114461_AddedBranchNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312170556059_newFkey.resx">
+      <DependentUpon>201312170556059_newFkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312170606445_newFkey1.resx">
+      <DependentUpon>201312170606445_newFkey1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312170607592_newFkey2.resx">
+      <DependentUpon>201312170607592_newFkey2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312170709157_newFkey4.resx">
+      <DependentUpon>201312170709157_newFkey4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312170955571_addingJunctionTable.resx">
+      <DependentUpon>201312170955571_addingJunctionTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

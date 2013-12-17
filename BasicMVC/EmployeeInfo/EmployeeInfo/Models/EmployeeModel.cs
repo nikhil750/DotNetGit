@@ -21,6 +21,21 @@ namespace EmployeeInfo.Models
         public DateTime DateofJoining { get; set; }
     }
 
+    [Table("JunctionEmployeeBranch")]
+    public class JunctionEmployeeBranch
+    {
+        [Key, Column(Order=1)]
+        public virtual int EmployeeID { get; set; }
+        [Key, Column(Order=2)]
+        public virtual int BranchID { get; set; }
+
+        [ForeignKey("EmployeeID")]
+        public EmployeeGit employeeGit { get; set; }
+
+        [ForeignKey("BranchID")]
+        public EmployeeBranch employeeBranch { get; set; }
+    }
+
     [Table("EmployeeBranch")]
     public class EmployeeBranch
     {
@@ -36,5 +51,7 @@ namespace EmployeeInfo.Models
         }
 
         public DbSet<EmployeeGit> employeeModel { get; set; }
+        public DbSet<EmployeeBranch> EmployeeBranch { get; set; }
+        public DbSet<JunctionEmployeeBranch> JunctionEmployeeBranch { get; set; }
     }
 }

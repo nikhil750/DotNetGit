@@ -7,6 +7,9 @@ using EmployeeInfo.Models;
 using EmployeeInfo.Models.NHibernate;
 using NHibernate;
 using NHibernate.Linq;
+using System.Data.SqlClient;
+using System.Data;
+
 namespace EmployeeInfo.Controllers
 {
     public class EmployeeController : Controller
@@ -17,12 +20,18 @@ namespace EmployeeInfo.Controllers
 
         public ActionResult Index()
         {
-            return View(eContext.employeeModel.ToList());
+
+            var employeeModel= eContext.employeeModel.ToList();
+
+            return View(employeeModel);
         }
 
         public ActionResult Create()
         {
-            return View();
+            CreateEmployee createEmployee = new CreateEmployee();
+            createEmployee.EmployeeBranch = eContext.EmployeeBranch.ToList();
+            
+            return View(createEmployee);
         }
 
         [HttpPost]
@@ -88,7 +97,5 @@ namespace EmployeeInfo.Controllers
             }
             return RedirectToAction("Branch");
         }
-
-
     }
 }
